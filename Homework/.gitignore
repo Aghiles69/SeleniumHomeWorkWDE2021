@@ -1,6 +1,8 @@
 ### Java template
 # Compiled class file
-HomeWork.iml
+*.iml
+/.idea
+*.class
 
 # Log file
 *.log

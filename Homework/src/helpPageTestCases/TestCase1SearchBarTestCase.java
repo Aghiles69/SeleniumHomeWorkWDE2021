@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class HelpPageSearchBarTestCase {
+public class TestCase1SearchBarTestCase {
 
     String absPath = System.getProperty("user.dir");
     String relativePath = "/Homework/resources/chromeDriver/chromedriver.exe";
