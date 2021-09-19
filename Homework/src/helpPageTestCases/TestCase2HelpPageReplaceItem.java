@@ -1,10 +1,13 @@
 package Homework.src.helpPageTestCases;
 
+import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -36,10 +39,21 @@ public class TestCase2HelpPageReplaceItem {
 
         WebElement findDropMenu = driver.findElement(By.cssSelector("#category-section"));
         findDropMenu.click();
-        WebElement getRTopicsOption = driver.findElementByCssSelector("#category-section > li:nth-child(1)");
-        getRTopicsOption.click();
-        WebElement getReturnsLink = driver.findElementByCssSelector("#help-gateway-category-0 > div > div > div.a-column.a-span6 > ul > li:nth-child(4) > a");
-        getReturnsLink.click();
+        WebElement getRetrunsOption = driver.findElementByCssSelector("#category-section > li:nth-child(4) > a");
+        getRetrunsOption.click();
+        WebElement getReplaceLink = driver.findElementByCssSelector("#help-gateway-category-3 > div > div > div > ul > li:nth-child(11) > a");
+        getReplaceLink.click();
+        webDriverWait = new WebDriverWait(driver,3);
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/div[3]/h1")));
+        String expectedText = "Replace an Item";
+        WebElement replaceText = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[1]/div/div[3]/h1"));
+        String actualText = replaceText.getText();
+        Assert.assertEquals(expectedText,actualText);
 
+    }
+    @After
+    public void tearDown () {
+        //driver.close();
+        //driver.quit();
     }
 }
