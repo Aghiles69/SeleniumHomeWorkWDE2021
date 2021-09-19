@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class HelpPageSearchBarTestCase {
 
     String absPath = System.getProperty("user.dir");
-    String relativePath = "/resources/WinWebDriver/chromedriver.exe";
+    String relativePath = "/Homework/resources/chromeDriver/chromedriver.exe";
     String chromeDriverPath = absPath + relativePath;
     String website = "https://www.amazon.com//";
     static WebDriverWait webDriverWait;
