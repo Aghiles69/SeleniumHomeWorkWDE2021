@@ -1,4 +1,4 @@
-package Homework.LoginTestCases;
+package Homework.loginTestCases;
 
 import org.junit.Before;
 import org.junit.Test;

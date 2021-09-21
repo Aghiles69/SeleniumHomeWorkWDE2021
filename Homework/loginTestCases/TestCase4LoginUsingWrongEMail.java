@@ -1,4 +1,4 @@
-package Homework.LoginTestCases;
+package Homework.loginTestCases;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestCase3LoginUsingWrongPassword {
+public class TestCase4LoginUsingWrongEMail {
 
     String absPath = System.getProperty("user.dir");
     String relativePath = "/Homework/resources/chromeDriver/chromedriver.exe";
@@ -37,12 +37,12 @@ public class TestCase3LoginUsingWrongPassword {
 
         WebElement enterEmail = driver.findElement(By.xpath("//*[@id=\"ap_email\"]"));
         enterEmail.click();
-        enterEmail.sendKeys("amazontestcaselogin@gmail.com");
+        enterEmail.sendKeys("amazontestcaselogin1@gmail.com");
         WebElement clickContinue = driver.findElement(By.xpath("//*[@id=\"continue\"]"));
         clickContinue.click();
         WebElement inputPassword = driver.findElement(By.xpath("//*[@id=\"ap_password\"]"));
         inputPassword.click();
-        inputPassword.sendKeys("Selenium11");
+        inputPassword.sendKeys("Selenium1");
         WebElement signIn = driver.findElement(By.xpath("//*[@id=\"signInSubmit\"]"));
         signIn.click();
     }
