@@ -1,4 +1,4 @@
-package helpPageTestCases;
+package Homework.helpPageTestCases;
 
 import org.junit.After;
 import org.junit.Assert;
